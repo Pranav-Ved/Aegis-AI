@@ -27,6 +27,11 @@ export default function Header() {
         setNotifications(data.notifications || [])
         setNotifCount(data.unread_count ?? 0)
       } else {
+        if (res.status === 401) {
+          localStorage.removeItem('aegis_token')
+          window.location.href = '/login'
+          return
+        }
         setNotifications(MOCK_NOTIFICATIONS)
         setNotifCount(MOCK_NOTIFICATIONS.filter(n => n.status === 'unread').length)
       }

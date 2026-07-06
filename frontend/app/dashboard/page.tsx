@@ -36,6 +36,11 @@ export default function DashboardPage() {
         const data = await res.json()
         setStats(data)
       } else {
+        if (res.status === 401) {
+          localStorage.removeItem('aegis_token')
+          window.location.href = '/login'
+          return
+        }
         // Use mock stats if backend returns error (demo mode)
         if (!stats) setStats(MOCK_STATS)
       }

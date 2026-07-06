@@ -33,7 +33,12 @@ export default function IncidentsPage() {
       const res = await fetch(`${API_URL}/api/v1/incidents/?${params}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
-      if (res.ok) setIncidents(await res.json())
+      if (res.ok) {
+        setIncidents(await res.json())
+      } else if (res.status === 401) {
+        localStorage.removeItem('aegis_token')
+        window.location.href = '/login'
+      }
     } catch { setIncidents(MOCK_INCIDENTS) }
     finally { setLoading(false) }
   }

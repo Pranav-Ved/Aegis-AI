@@ -43,6 +43,17 @@ export default function MapPage() {
         fetch(`${API_URL}/api/v1/resources/shelters`, { headers }),
         fetch(`${API_URL}/api/v1/resources/hospitals`, { headers }),
       ])
+      const isUnauthorized = 
+        (incRes.status === 'fulfilled' && incRes.value.status === 401) ||
+        (shelRes.status === 'fulfilled' && shelRes.value.status === 401) ||
+        (hosRes.status === 'fulfilled' && hosRes.value.status === 401);
+      
+      if (isUnauthorized) {
+        localStorage.removeItem('aegis_token');
+        window.location.href = '/login';
+        return;
+      }
+
       if (incRes.status === 'fulfilled' && incRes.value.ok) setIncidents(await incRes.value.json())
       if (shelRes.status === 'fulfilled' && shelRes.value.ok) setShelters(await shelRes.value.json())
       if (hosRes.status === 'fulfilled' && hosRes.value.ok) setHospitals(await hosRes.value.json())
