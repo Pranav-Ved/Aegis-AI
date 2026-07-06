@@ -45,7 +45,16 @@ class Settings(BaseSettings):
     # URLs and CORS Config
     frontend_url: str = "http://localhost:3000"
     backend_url: str = "http://localhost:8000"
-    cors_origins: List[str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
+    cors_origins: List[str] = [
+        "http://localhost:3000", 
+        "http://127.0.0.1:3000",
+        "http://localhost:3001",
+        "http://127.0.0.1:3001",
+        "http://localhost:3002",
+        "http://127.0.0.1:3002",
+        "http://localhost:3003",
+        "http://127.0.0.1:3003"
+    ]
     
     # Rate Limiting Config
     rate_limit_public: str = "20/minute"
