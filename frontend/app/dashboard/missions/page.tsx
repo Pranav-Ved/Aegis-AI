@@ -21,7 +21,7 @@ export default function MissionsPage() {
   const fetchMissions = async () => {
     const token = localStorage.getItem('aegis_token')
     try {
-      const res = await fetch(`${API_URL}/api/v1/missions?limit=50`, {
+      const res = await fetch(`${API_URL}/api/v1/missions/?limit=50`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       if (res.ok) setMissions(await res.json())

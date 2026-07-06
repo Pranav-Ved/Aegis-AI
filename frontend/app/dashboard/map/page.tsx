@@ -39,7 +39,7 @@ export default function MapPage() {
     setLoading(true)
     try {
       const [incRes, shelRes, hosRes] = await Promise.allSettled([
-        fetch(`${API_URL}/api/v1/incidents?limit=50`, { headers }),
+        fetch(`${API_URL}/api/v1/incidents/?limit=50`, { headers }),
         fetch(`${API_URL}/api/v1/resources/shelters`, { headers }),
         fetch(`${API_URL}/api/v1/resources/hospitals`, { headers }),
       ])

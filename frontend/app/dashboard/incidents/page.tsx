@@ -30,7 +30,7 @@ export default function IncidentsPage() {
       const params = new URLSearchParams({ limit: '50', skip: '0' })
       if (severity !== 'all') params.set('severity', severity)
       if (type !== 'all') params.set('incident_type', type)
-      const res = await fetch(`${API_URL}/api/v1/incidents?${params}`, {
+      const res = await fetch(`${API_URL}/api/v1/incidents/?${params}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       if (res.ok) setIncidents(await res.json())
@@ -169,7 +169,7 @@ function IncidentForm({ onClose, onCreated }: { onClose: () => void; onCreated: 
     e.preventDefault()
     setLoading(true)
     try {
-      const res = await fetch(`${API_URL}/api/v1/incidents`, {
+      const res = await fetch(`${API_URL}/api/v1/incidents/`, {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
