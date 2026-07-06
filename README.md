@@ -97,6 +97,8 @@ The platform also integrates **Model Context Protocol (MCP) Servers** for maps, 
 - Live updates
 - WebSocket synchronization
 
+<img width="1917" height="921" alt="Image" src="https://github.com/user-attachments/assets/f7c34761-04c8-42f1-8be3-5469e340dfec" />
+
 ---
 
 ## 🗺 Interactive Disaster Map
@@ -108,6 +110,8 @@ The platform also integrates **Model Context Protocol (MCP) Servers** for maps, 
 - Resource tracking
 - Live mission visualization
 
+<img width="1912" height="922" alt="Image" src="https://github.com/user-attachments/assets/bc5b0eb2-807d-4030-9a40-96805aca3f8f" />
+
 ---
 
 ## 🚑 Rescue Coordination
@@ -117,6 +121,8 @@ The platform also integrates **Model Context Protocol (MCP) Servers** for maps, 
 - Volunteer deployment
 - Vehicle assignment
 - Resource optimization
+
+<img width="1917" height="917" alt="Image" src="https://github.com/user-attachments/assets/ef1dc134-98c5-4620-b9fc-e497a2c26e59" />
 
 ---
 
