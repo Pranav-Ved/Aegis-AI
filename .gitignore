@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+env/
+venv/
+.venv/
+ENV/
+.env
+!.env.example
+*.log
+
+# pytest / coverage
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDE / Editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Docker
+*.override.yml
+
+# Firebase / GCP credentials
+*-firebase-adminsdk-*.json
+firebase_creds.json
+gcp_key.json
+service_account.json
+
+# Secrets
+*.pem
+*.key
+*.p12
+
+# Reports / temp
+/tmp/
+aegisai_reports/
+
+# OS
+.DS_Store
+Desktop.ini
