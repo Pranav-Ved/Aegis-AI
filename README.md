@@ -66,6 +66,11 @@ Instead of relying on a single AI model, AegisAI coordinates multiple specialize
 
 The platform also integrates **Model Context Protocol (MCP) Servers** for maps, weather, notifications, reports, logging, and database operations.
 
+
+<img width="1917" height="917" alt="Image" src="https://github.com/user-attachments/assets/f80fb818-3da0-480e-a750-93b44e5707fe" />
+
+
+
 ---
 
 # ✨ Key Features
